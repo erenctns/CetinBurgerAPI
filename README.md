@@ -200,4 +200,4 @@ Projede **N8N** local olarak kurulmuş ve ödeme alındıktan sonra ilgili kulla
 
 ---
 
-Bu proje eğitim amaçlıdır. Production'da kullanmadan önce güvenlik önlemlerini alın.
+
