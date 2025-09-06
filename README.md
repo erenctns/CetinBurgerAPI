@@ -95,6 +95,10 @@ CetinBurger/
 - **Domain:** Entities, Business rules
 - **Infrastructure:** Database, External services
 
+# 📚 API ENDPOINTS IN SWAGGER UI
+<img width="1092" height="862" alt="Image" src="https://github.com/user-attachments/assets/2cf6aa6a-32db-448e-963f-10cea3f42a3e" />
+<img width="981" height="638" alt="Image" src="https://github.com/user-attachments/assets/2ed5277f-981a-4ae4-b335-8a42f6e14122" />
+
 # 📚 API ENDPOINTS
 
 ### 🔐 Authentication
@@ -185,7 +189,14 @@ Projede **N8N** local olarak kurulmuş ve ödeme alındıktan sonra ilgili kulla
 - ✅ **Local workflow** ile ödeme durumu takibi
 - ✅ **Workflow automation** ile süreç otomasyonu
 
+### 🛒 ÖRNEK SENARYO  🛒###
+** Kullanıcı girişi , Sepete ürün ekleme , Sepetteki ürünü onaylama , Ödeme kısmı
 
+** Stripe ödeme adımı öncesindeki mevcut tutar( TEST DASHBOARD )
+
+** Stripe ödeme adımı sonrasındaki mevcut tutar( TEST DASHBOARD )
+
+** N8N entegrasyonu ile status:"Paid" ve mailSentStatus:"False" olan Orderları alıp ilgili kullanıcıyaAI Agent 'ın oluşturduğu sipariş mesajını mail atıyoruz ve mail sonrası eğer mail olumluysa mailSentStatus'u :"True" olarak set ediyoruz.
 
 ---
 
