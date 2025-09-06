@@ -7,7 +7,7 @@ using System.Security.Claims;
 namespace CetinBurger.API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/cart")]
 [Authorize(Roles = "Customer,Admin")] // Hem müşteri hem admin sepet kullanabilir
 /// Kullanıcıların sepet işlemlerini (listeleme, ekleme, güncelleme, silme) yönetir.
 /// Kimlik doğrulaması zorunludur ve kullanıcı, kimlik bilgisinden (ClaimTypes.NameIdentifier) alınır.

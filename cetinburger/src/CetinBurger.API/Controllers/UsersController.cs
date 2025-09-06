@@ -9,7 +9,7 @@ namespace CetinBurger.API.Controllers;
 /// Kullanıcı yönetimi için controller (Sadece Admin erişimi)
 /// </summary>
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/users")]
 [Authorize(Roles = "Admin")]
 public class UsersController : ControllerBase
 {

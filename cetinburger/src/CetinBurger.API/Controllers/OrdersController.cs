@@ -7,7 +7,7 @@ using System.Security.Claims;
 namespace CetinBurger.API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/orders")]
 [Authorize(Roles = "Customer,Admin")]
 public class OrdersController : ControllerBase
 {

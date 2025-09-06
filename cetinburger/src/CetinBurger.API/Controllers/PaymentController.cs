@@ -9,7 +9,7 @@ namespace CetinBurger.API.Controllers;
 /// Ödeme işlemleri için controller
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/payment")]
 [Authorize] // Sadece giriş yapmış kullanıcılar
 public class PaymentController : ControllerBase
 {
@@ -148,7 +148,7 @@ public class PaymentController : ControllerBase
                 stripeConfigured = !string.IsNullOrEmpty(stripeKey),
                 usage = new
                 {
-                    endpoint = "POST /api/Payment/process",
+                    endpoint = "POST /api/payment/process",
                     examples = new
                     {
                         withTestCard = new
