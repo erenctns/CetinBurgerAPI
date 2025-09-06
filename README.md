@@ -78,15 +78,15 @@ dotnet run --project src/CetinBurger.API
 # 📁 PROJE YAPISI
 
 ```
-CetinBurger/
+cetinburger/
 ├── src/
 │   ├── CetinBurger.API/           # API Katmanı (Controllers, Program.cs)
 │   ├── CetinBurger.Application/  # Uygulama Katmanı (Services, DTOs, Validation)
 │   ├── CetinBurger.Domain/        # Domain Katmanı (Entities)
 │   └── CetinBurger.Infrastructure/ # Altyapı Katmanı (DbContext, Migrations)
-├── appsettings.example.json       # Örnek konfigürasyon dosyası
 ├── .gitignore                     # Git ignore dosyası
 └── README.md                      # Proje dokümantasyonu
+
 ```
 
 **Clean Architecture Katmanları:**
@@ -96,54 +96,54 @@ CetinBurger/
 - **Infrastructure:** Database, External services
 
 # 📚 API ENDPOINTS IN SWAGGER UI
-<img width="1092" height="862" alt="Image" src="https://github.com/user-attachments/assets/2cf6aa6a-32db-448e-963f-10cea3f42a3e" />
-<img width="981" height="638" alt="Image" src="https://github.com/user-attachments/assets/2ed5277f-981a-4ae4-b335-8a42f6e14122" />
+<img width="1156" height="885" alt="Image" src="https://github.com/user-attachments/assets/2bcb69fa-7fb2-41c2-8180-6e2f004ef386" />
+<img width="1099" height="727" alt="Image" src="https://github.com/user-attachments/assets/c5f8ec7a-b49e-4b92-abed-065f112db827" />
 
 # 📚 API ENDPOINTS
 
 ### 🔐 Authentication
-- `POST /api/Auth/register` - Kullanıcı kaydı
-- `POST /api/Auth/login` - Kullanıcı girişi
+- `POST /api/auth/register` - Kullanıcı kaydı
+- `POST /api/auth/login` - Kullanıcı girişi
 
 ### 🍔 Products
-- `GET /api/Products` - Ürün listesi
-- `GET /api/Products/{id}` - Ürün detayı
-- `GET /api/Products/byCategory/{categoryId}` - Kategoriye göre ürünler
-- `POST /api/Products` - Ürün ekleme (Admin)
-- `PUT /api/Products/{id}` - Ürün güncelleme (Admin)
-- `DELETE /api/Products/{id}` - Ürün silme (Admin)
+- `GET /api/products` - Ürün listesi
+- `GET /api/products/{id}` - Ürün detayı
+- `GET /api/products/byCategory/{categoryId}` - Kategoriye göre ürünler
+- `POST /api/products` - Ürün ekleme (Admin)
+- `PUT /api/products/{id}` - Ürün güncelleme (Admin)
+- `DELETE /api/products/{id}` - Ürün silme (Admin)
 
 ### 🛒 Cart
-- `GET /api/Cart` - Sepet görüntüleme
-- `POST /api/Cart/items` - Sepete ürün ekleme
-- `PUT /api/Cart/items/{itemId}` - Sepet ürünü güncelleme
-- `DELETE /api/Cart/items/{itemId}` - Sepetten ürün silme
+- `GET /api/cart` - Sepet görüntüleme
+- `POST /api/cart/items` - Sepete ürün ekleme
+- `PUT /api/cart/items/{itemId}` - Sepet ürünü güncelleme
+- `DELETE /api/cart/items/{itemId}` - Sepetten ürün silme
 
 ### 📦 Orders
-- `POST /api/Orders/checkout` - Sipariş verme
-- `GET /api/Orders/my` - Siparişlerimi görüntüleme
-- `GET /api/Orders/{id}` - Sipariş detayı
-- `GET /api/Orders/admin/all` - Tüm siparişler (Admin)
-- `PUT /api/Orders/{id}/mailStatus` - Mail gönderim durumu güncelleme (Admin)
-- `DELETE /api/Orders/{id}` - Sipariş silme (Admin)
+- `POST /api/orders/checkout` - Sipariş verme
+- `GET /api/orders/my` - Siparişlerimi görüntüleme
+- `GET /api/orders/{id}` - Sipariş detayı
+- `GET /api/orders/admin/all` - Tüm siparişler (Admin)
+- `PUT /api/orders/{id}/mailStatus` - Mail gönderim durumu güncelleme (Admin)
+- `DELETE /api/orders/{id}` - Sipariş silme (Admin)
 
 ### 🏷️ Categories
-- `GET /api/Categories` - Kategori listesi
-- `GET /api/Categories/{id}` - Kategori detayı
-- `POST /api/Categories` - Kategori ekleme (Admin)
-- `PUT /api/Categories/{id}` - Kategori güncelleme (Admin)
-- `DELETE /api/Categories/{id}` - Kategori silme (Admin)
+- `GET /api/categories` - Kategori listesi
+- `GET /api/categories/{id}` - Kategori detayı
+- `POST /api/categories` - Kategori ekleme (Admin)
+- `PUT /api/categories/{id}` - Kategori güncelleme (Admin)
+- `DELETE /api/categories/{id}` - Kategori silme (Admin)
 
 ### 👥 Users (Admin Only)
-- `GET /api/Users` - Kullanıcı listesi (Sayfalı)
-- `GET /api/Users/{id}` - Kullanıcı detayı
-- `PUT /api/Users/{id}/role` - Kullanıcı rolü güncelleme
-- `DELETE /api/Users/{id}` - Kullanıcı silme
+- `GET /api/users` - Kullanıcı listesi (Sayfalı)
+- `GET /api/users/{id}` - Kullanıcı detayı
+- `PUT /api/users/{id}/role` - Kullanıcı rolü güncelleme
+- `DELETE /api/users/{id}` - Kullanıcı silme
 
 ### 💳 Payment
-- `POST /api/Payment/process` - Ödeme işlemi
-- `GET /api/Payment/status/{paymentIntentId}` - Ödeme durumu
-- `POST /api/Payment/test` - Test endpoint'i
+- `POST /api/payment/process` - Ödeme işlemi
+- `GET /api/payment/status/{paymentIntentId}` - Ödeme durumu
+- `POST /api/payment/test` - Test endpoint'i
 
 # 🧪 TEST
 
@@ -163,7 +163,7 @@ Migration çalıştırdıktan sonra otomatik olarak oluşturulan test kullanıc�
 
 ### Örnek Ödeme:
 ```json
-POST /api/Payment/process
+POST /api/payment/process
 {
   "amount": 9000,
   "currency": "try",
@@ -181,7 +181,7 @@ POST /api/Payment/process
 # 🔄 N8N WORKFLOW AUTOMATION
 
 ### 📧 Email Automation
-Projede **N8N** local olarak kurulmuş ve ödeme alındıktan sonra ilgili kullanıcıya sipariş bilgilerini içeren **otomatik email gönderimi** için kullanılmıştır.
+Projede **N8N** local olarak kurulmuş ve ödeme alındıktan sonra ilgili kullanıcıya sipariş bilgilerini içeren **otomatik email gönderimi** için kullanılmıştır fakat uyguladıktan sonra projeden kaldırılmıştır.
 
 **N8N'in Amacı:**
 - ✅ Ödeme başarılı olduktan sonra **otomatik email** gönderimi
@@ -196,7 +196,7 @@ Projede **N8N** local olarak kurulmuş ve ödeme alındıktan sonra ilgili kulla
 
 ** Stripe ödeme adımı sonrasındaki mevcut tutar( TEST DASHBOARD )
 
-** N8N entegrasyonu ile status:"Paid" ve mailSentStatus:"False" olan Orderları alıp ilgili kullanıcıyaAI Agent 'ın oluşturduğu sipariş mesajını mail atıyoruz ve mail sonrası eğer mail olumluysa mailSentStatus'u :"True" olarak set ediyoruz.
+** N8N entegrasyonu ile status:"Paid" ve mailSentStatus:"False" olan Orderları alıp ilgili kullanıcıya AI Agent 'ın oluşturduğu sipariş mesajını mail atıyoruz ve mail sonrası eğer mail olumluysa mailSentStatus'u :"True" olarak set ediyoruz.
 
 ---
 
