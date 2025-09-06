@@ -190,13 +190,20 @@ Projede **N8N** local olarak kurulmuş ve ödeme alındıktan sonra ilgili kulla
 - ✅ **Workflow automation** ile süreç otomasyonu
 
 ### 🛒 ÖRNEK SENARYO  🛒###
-** Kullanıcı girişi , Sepete ürün ekleme , Sepetteki ürünü onaylama , Ödeme kısmı
+** Kullanıcı girişi , Sepete ürün ekleme , Sepetteki ürünü onaylama , Ödeme kısmı yapıldı.
 
 ** Stripe ödeme adımı öncesindeki mevcut tutar( TEST DASHBOARD )
 
-** Stripe ödeme adımı sonrasındaki mevcut tutar( TEST DASHBOARD )
+<img width="892" height="447" alt="Image" src="https://github.com/user-attachments/assets/5e0b0ecc-0a8f-4540-ad16-0a96df1ad98b" />
+
+** Stripe ödeme adımı sonrasındaki mevcut tutar , gelen siparişin ücretini dashboarda ekliyor( TEST DASHBOARD )
+
+<img width="900" height="419" alt="Image" src="https://github.com/user-attachments/assets/447bcd2b-bc01-405d-85e4-e00e0a438cd9" />
+
 
 ** N8N entegrasyonu ile status:"Paid" ve mailSentStatus:"False" olan Orderları alıp ilgili kullanıcıya AI Agent 'ın oluşturduğu sipariş mesajını mail atıyoruz ve mail sonrası eğer mail olumluysa mailSentStatus'u :"True" olarak set ediyoruz.
+
+![Image](https://github.com/user-attachments/assets/0ace2ba7-2a53-4031-bcad-77c8a3e36ac9)
 
 ---
 
